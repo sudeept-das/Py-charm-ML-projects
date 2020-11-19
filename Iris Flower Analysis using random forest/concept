@@ -1,0 +1,17 @@
+Problem Statement:
+Wonder what species of iris do these flowers belong to?
+Let's try to predict the species of the flowers using machine learning in Python.
+
+Solution:
+df['species'] = pd.Categorical.from_codes(iris.target,
+                                          iris.target_names)
+In the above code we are storing the target_name from the dataset df(which is actually the name of type of flower)
+with respect to the number in the iris.target(which represents which represents the index number of the target_name
+for the specific row).
+
+df['is_train'] = np.random.uniform(0,1,len(df)) <= .75
+here a random number from 0 to 1 is generated for each of the row of the dataset df using
+np.random.uniform(0,1,len(df)).
+If the number is <=.75 then true is stored in the column is_train of the dataset else false is stored
+in the row is_train of the dataset.
+The overall statement means we are going to take 75% of the dataset df to label it as training dataset

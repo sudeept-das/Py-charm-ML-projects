@@ -1,0 +1,22 @@
+Objective:
+Predict whether a person will be diagnosed or not.
+(We have a dataset of 762 people who were or were not diagnosed with diabetes)
+
+Solution:
+We will be looking at insulin.
+
+We use train_test_split to split the data into training data and testing data.
+We use StandardScalar preprocessing so that we do not have large bias or large numbers
+We use KNeighborsClassifier to use KNN
+We use confusion_matrix, f1_score and accuracy_score to testing the model
+
+head() shows top 5 rows data
+We will make a list of datas were value of Glucose, BloodPressure, SkinThickness, BMI and Insulin are not zero as if it is zero then the person wiil die.
+
+Rule of Thumb: Any algorithm that computes distance or assumes normality, scale your features!
+                That's why we need to do feature Scaling
+
+In the code:
+N_neighbors is 'K', p is the power parameter to define the metric used, which is 'Euclidean' in our case
+
+It's important to evaluate the model, let's use confusion matrix to do that.

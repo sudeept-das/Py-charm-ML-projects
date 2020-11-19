@@ -1,0 +1,37 @@
+Problem statement:
+Predict the number shown by the image using logistic regression.
+
+Solution:
+Step1:
+Dividing the data set into Training Set and Test Data
+Step2:
+Training the model using the training data
+Step3:
+Testing the model using the Test Data and identifying nimber in images
+
+In LogisticRegression(penalty=’l2’, dual=False, tol=0.0001, C=1.0, fit_intercept=True, intercept_scaling=1, class_weight=None, random_state=None, solver=’warn’, max_iter=100, multi_class=’warn’, verbose=0, warm_start=False, n_jobs=None):-
+1)solver : str, {‘newton-cg’, ‘lbfgs’, ‘liblinear’, ‘sag’, ‘saga’}, default: ‘liblinear’.
+            Algorithm to use in the optimization problem.
+
+            For small datasets, ‘liblinear’ is a good choice, whereas ‘sag’ and ‘saga’ are faster for large ones.
+            For multiclass problems, only ‘newton-cg’, ‘sag’, ‘saga’ and ‘lbfgs’ handle multinomial loss; ‘liblinear’ is limited to one-versus-rest schemes.
+            ‘newton-cg’, ‘lbfgs’ and ‘sag’ only handle L2 penalty, whereas ‘liblinear’ and ‘saga’ handle L1 penalty.
+            Note that ‘sag’ and ‘saga’ fast convergence is only guaranteed on features with approximately the same scale. You can preprocess the data with a scaler from sklearn.preprocessing.
+
+            New in version 0.17: Stochastic Average Gradient descent solver.
+
+            New in version 0.19: SAGA solver.
+
+            Changed in version 0.20: Default will change from ‘liblinear’ to ‘lbfgs’ in 0.22.
+
+2) multi_class : str, {‘ovr’, ‘multinomial’, ‘auto’}, default: ‘ovr’
+                If the option chosen is ‘ovr’, then a binary problem is fit for each label. For ‘multinomial’ the loss minimised is the multinomial loss fit across the entire probability distribution, even when the data is binary. ‘multinomial’ is unavailable when solver=’liblinear’. ‘auto’ selects ‘ovr’ if the data is binary, or if solver=’liblinear’, and otherwise selects ‘multinomial’.
+
+                New in version 0.18: Stochastic Average Gradient descent solver for ‘multinomial’ case.
+
+                Changed in version 0.20: Default will change from ‘ovr’ to ‘auto’ in 0.22.
+
+In confusion matrix the accuracy is determined the total number of numbers present in the diagonal of the confusion matrix
+More the number present in the diagonal more the acccuracy is.
+
+The sum of the diagonals of the confusion matrix is the total number of datas in the test data of confusion matrix which in this code is Y_test giving correct predictions.

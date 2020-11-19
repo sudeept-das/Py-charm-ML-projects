@@ -1,0 +1,13 @@
+Problem Statement:
+Predicting profit of 1000 companies based on the attribute mentioned in the figure:
+1) Money spend on R & D
+2) Administration cost
+3) Money spend on Marketing
+4) State
+
+Solution:
+X= companies.iloc[:, :-1].values
+In the above line we are takling all rows of the column except the last column
+
+LabelEcoder() is used to process the string present in the dataset as linear regression does not know how to process
+strings but it knows how to process numbers.

@@ -1,0 +1,15 @@
+Here we need to find out if my customers are going to return the loan they took from a bank or not
+
+Problem Statement:
+To predict if a customer will repay loan amount or not using decision tree algorithm in python
+
+Solution:
+balance_data.shape gives the number of rows and number of columns in the dataset
+
+In the code X is our data and Y is our answer or target
+In train_test_split random_state is used to randomly select data.
+
+In DecisionTreeClassifier(criterion= "entropy", random_state= 100,
+                                    max_depth=3, min_samples_leaf=5)
+max_depth is the number of layers it will go before it stops
+min_samples_leaf is the minimum number of leafs of the decision tree

@@ -1,0 +1,25 @@
+Problem Statement:
+To perform text classification of New Headlines and classify news into different news into different topics for a
+News Website.
+
+Solution:
+
+Seaborn seats on top of matplotlib used to show heatmaps and great goloring for the graph plotted by matplotlib.
+
+from sklearn.datasets import fetch_20newsgroups is tokenizing words and how to categorize the words and documents.
+data.target_names gives the topics or categorize given by fetch_20newsgroups.
+
+TfidfVectorizer is used to know how many words are used in the document or how many documents are used
+
+make_pipeline is just a piece of code used to show how the organization of the data will flow.
+In the code we will take the information returned by TFidVectorizer and we are going to pump that into MultinomialNB(Multinomial Naive Bayes)
+
+model.fit(train.data, train.target)
+Here train.data is going in the TfidVectorizer which gives weight to the words appearing in the document(i.e. assigning frequency of words)
+and based on these weights it passes to MultinomialNB
+and then we categorized using test.category(which contains all the categories).
+
+labels = model.predict(test.data)
+Here we predict the answers for test.data using the model
+
+confusion_matrix is used to know if the model missed something or not.

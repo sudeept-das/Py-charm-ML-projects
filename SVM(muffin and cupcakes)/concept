@@ -1,0 +1,19 @@
+Problem statement:
+Classifying muffin and cupcakes recepie using Support Vector Machine.
+
+Difference between muffin and cupcakes:
+Muffins have more flour, while cupcakes have more butter and sugar.
+
+numpy deals with number array
+pandas makes a nice data frame
+
+Difference between data frame and number array is:
+data frame is more like excel spreadsheet we have columns and rows and easy to reference.
+
+For visualizing data (i.e. sometimes dataset does not give sense to human for that we use some libraries):
+matplotlib
+seaborn
+
+matplotlib inline is used in jupyter for display all graphics in webpage.
+
+csv full form is comma separate variable.

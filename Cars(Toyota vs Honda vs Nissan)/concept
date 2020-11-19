@@ -1,0 +1,22 @@
+Problem Statement:
+Using K-means clustering to cluster cars into brands using parameters such as horsepower, cubic inches, make year, etc.
+
+Dataset:
+Cars data having information about 3 brands of cars namely Toyota, Honda, Nissan
+
+# importing the dataset
+dataset = pd.read_csv('cars.csv')
+
+X= dataset[:-1]
+X.head()
+
+# Eliminating null values
+for i in X.columns:
+    X[i].fillna(int(X[i].mean()))                   # Filling data inside any missing data with the mean of all the values of that column
+for i in X.columns:
+    print(X[i].isnull().sum())                      # Finding total number of null values
+
+# to take all rows but not tha last column of the dataset
+X= dataset.iloc[:,:-1].values
+        OR
+X= dataset[dataset.columns[:-1]]

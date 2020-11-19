@@ -1,0 +1,8 @@
+Problem Statement:
+To classify whether a tumor is 'maligant' or 'benign'.
+
+Solution:
+In data science it is important to split data we do it using data_split_data()
+In this we will split the data(X,y) into two groups:
+1) To train the data(X_train, y_train)
+2) To test the data(X_test, y_test)
